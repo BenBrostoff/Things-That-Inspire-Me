@@ -1,0 +1,49 @@
+/*
+body{
+  overflow: hidden;
+}
+*/
+a {
+  font-family: 'Crimson Text', serif;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #36AECC;
+}
+
+.forward, .backward {
+  margin-right: 2%;
+  margin-top: 10%;
+  float: right;
+}
+
+.backward {
+  float: left;
+}
+
+.current_link{
+  font-size: 40px;
+  position: fixed;
+  margin-left: 15%;
+  text-align: center;
+  width: 70%;
+  margin-top: 12%;
+}
+
+
+.full-list{
+  position: absolute;
+  margin-top: 25%;
+  margin-left: 40%;
+  width: 75%;
+}
+
+.bottom {
+  position: absolute;
+  margin-top: 55%;
+  margin-left: 4%;
+  width: 75%;
+  text-align: center;
+}
+
