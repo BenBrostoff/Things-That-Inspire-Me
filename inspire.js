@@ -58,10 +58,10 @@ var InspireController = function() {
   this.initialize = function() {
 
     $(document).on("click", ".forward", goForward)
-    //Mousetrap.bind('left', turnPageRight)
+    Mousetrap.bind('left', goForward)
     
     $(document).on("click", ".backward", goBack)
-    //Mousetrap.bind('right', turnPageLeft)
+    Mousetrap.bind('right', goBack)
 
     inspireView.showCurrentLink(inspireModel.array[0]) 
   }
