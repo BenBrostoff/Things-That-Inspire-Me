@@ -6,6 +6,7 @@ body{
 a {
   font-family: 'Crimson Text', serif;
   text-decoration: none;
+  color: #585858;
 }
 
 a:hover {
@@ -35,14 +36,15 @@ a:hover {
 .full-list{
   position: absolute;
   margin-top: 25%;
-  margin-left: 40%;
+  margin-left: 12%;
   width: 75%;
+  text-align: center;
 }
 
 .bottom {
   position: absolute;
-  margin-top: 55%;
-  margin-left: 4%;
+  margin-top: 35%;
+  margin-left: 12%;
   width: 75%;
   text-align: center;
 }
