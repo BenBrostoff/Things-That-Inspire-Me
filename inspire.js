@@ -1,8 +1,5 @@
 // MODEL
 
-inspireBen = ["<a href= 'https://www.youtube.com/watch?v=ApoJk9X7Vto'> Jeter Flip </a>",
-              "<a href= 'https://www.youtube.com/watch?v=vUFbjCD2taw'> Brady Drive </a>"]
-
 var InspireModel = function(current) {
   this.array = inspireBen;
   this.current = 0;
