@@ -1,7 +1,7 @@
 // MODEL
 
 var InspireModel = function(current) {
-  this.array = inspireBen;
+  this.array = shuffle(inspireBen);
   this.current = 0;
   this.end = inspireBen.length - 1;
 };
@@ -53,6 +53,7 @@ var InspireController = function() {
     inspireModel.checkForBeginning();
 
     inspireView.showCurrentLink(inspireModel.array[inspireModel.current]);
+
   }
 
   this.initialize = function() {
@@ -60,8 +61,10 @@ var InspireController = function() {
     $(document).on("click", ".forward", goForward)
     Mousetrap.bind('left', goForward)
     
+
     $(document).on("click", ".backward", goBack)
     Mousetrap.bind('right', goBack)
+
 
     inspireView.showCurrentLink(inspireModel.array[0]) 
   }
