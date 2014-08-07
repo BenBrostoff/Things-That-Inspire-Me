@@ -65,6 +65,8 @@ var InspireController = function() {
     $(document).on("click", ".backward", goBack)
     Mousetrap.bind('right', goBack)
 
+    $(document).on("click", ".full-list", displayFull)
+
 
     inspireView.showCurrentLink(inspireModel.array[0]) 
   }
