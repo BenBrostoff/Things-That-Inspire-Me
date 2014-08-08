@@ -61,11 +61,11 @@ var InspireController = function() {
     initializeLinks();
 
     $(document).on("click", ".forward", goForward)
-    Mousetrap.bind('left', goForward)
+    Mousetrap.bind('right', goForward)
     
 
     $(document).on("click", ".backward", goBack)
-    Mousetrap.bind('right', goBack)
+    Mousetrap.bind('left', goBack)
 
     $(document).on("click", ".full-list", displayFull)
 
