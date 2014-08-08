@@ -58,6 +58,8 @@ var InspireController = function() {
 
   this.initialize = function() {
 
+    initializeLinks();
+
     $(document).on("click", ".forward", goForward)
     Mousetrap.bind('left', goForward)
     
