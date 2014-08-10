@@ -34,6 +34,10 @@ InspireView.prototype.showCurrentLink = function(link) {
   $('.current_link').html(link)
 }
 
+InspireView.prototype.showSummary = function(link) {
+  $('.list-text').text("Full List (" + inspireBen.length.toString() +")")
+}
+
 // CONTROLLER
 
 var InspireController = function() {
@@ -70,6 +74,8 @@ var InspireController = function() {
     $(document).on("click", ".full-list", displayFull)
 
 
+
+    inspireView.showSummary();
     inspireView.showCurrentLink(inspireModel.array[0]) 
   }
 
