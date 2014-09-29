@@ -15,16 +15,20 @@
  <script src="js/mousetrap.js"></script>
 </head>
 
-<div class="forward"> <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-right-128.png"> </div>
+<div class="master_view" ng-controller="CoolLinks as cool">
 
-<div class="current_link" ng-controller="CoolLinks as cool"  ng-bind-html="cool.links[1]">
-</div>
+  <div class="forward" ng-click="cool.add()"> <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-right-128.png"> </div>
 
-<div class="backward"> <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-left-128.png"></div>
+  <div class="current_link"   ng-bind-html="cool.current">
+  </div>
 
-<div class="full-list">
-  <a class="list-text"></a>
-  <div class="link-list"></div>
+  <div class="backward" ng-click="cool.subtract()"> <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-left-128.png"></div>
+
+  <div class="full-list">
+    <a class="list-text"></a>
+    <div class="link-list"></div>
+  </div>
+
 </div>
 
 <div class="bottom">
