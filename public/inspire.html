@@ -1,21 +1,24 @@
-<html lang="en">
+<html lang="en" ng-app="inspireMe">
 
 
 <head>
 <link rel="stylesheet" type="text/css" href="css/inspire.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-sanitize.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display|Crimson+Text' rel='stylesheet' type='text/css'>
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script src="js/mvc.js"></script>
  <script src="js/inspire.js"></script>
  <script src="js/linkCollection.js"></script>
  <script src="js/fullList.js"></script>
  <script src="js/shuffle.js"></script>
  <script src="js/mousetrap.js"></script>
-
 </head>
 
 <div class="forward"> <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-right-128.png"> </div>
 
-<div class="current_link">""</div>
+<div class="current_link" ng-controller="CoolLinks as cool"  ng-bind-html="cool.links[1]">
+</div>
 
 <div class="backward"> <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-left-128.png"></div>
 
