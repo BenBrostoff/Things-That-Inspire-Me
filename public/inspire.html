@@ -6,6 +6,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-sanitize.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Playfair+Display|Crimson+Text' rel='stylesheet' type='text/css'>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"/></script>
   <script src="js/mvc.js"></script>
   <script src="js/linkCollection.js"></script>
   <script src="js/shuffle.js"></script>
@@ -26,7 +27,7 @@
   <div class="full-list">
     <a class="link-text" ng-click="cool.reveal()">Full List ({{cool.links.length}})</a>
     <br></br> 
-    <span class="link-text" ng-repeat="insp in cool.links" ng-show="cool.visi"> 
+    <span class="link-text" ng-repeat="insp in cool.links" fade-direct="cool.visi"> 
       <span ng-bind-html="insp"> </span>
       <span> || </span>
     </span>

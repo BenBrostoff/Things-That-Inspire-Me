@@ -45,9 +45,31 @@
       }
     };
 
-
   });
 
+
+  app.directive("fadeDirect", function($animate) {
+    return function (scope, element, attrs) {
+      scope.$watch(attrs.fadeDirect, function(newVal) {
+        if (newVal) {
+          $animate.addClass(element, "fade");
+        } else {
+          $animate.removeClass(element, "fade");
+        }
+      })
+    }
+  });
+
+  app.animation(".fade", function() {
+    return {
+      addClass: function(element, className) {
+        TweenMax.to(element, 1, {opacity: 0});
+      },
+      removeClass: function(element, className){
+        TweenMax.to(element, 1, {opacity: 1})
+      }
+    }
+  });
 
 
 })();
