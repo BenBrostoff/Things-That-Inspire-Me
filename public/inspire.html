@@ -1,22 +1,24 @@
 <html lang="en" ng-app="inspireMe">
 
-
 <head>
-<link rel="stylesheet" type="text/css" href="css/inspire.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-sanitize.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Playfair+Display|Crimson+Text' rel='stylesheet' type='text/css'>
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
- <script src="js/mvc.js"></script>
- <script src="js/linkCollection.js"></script>
- <script src="js/shuffle.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/inspire.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-sanitize.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Playfair+Display|Crimson+Text' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/mvc.js"></script>
+  <script src="js/linkCollection.js"></script>
+  <script src="js/shuffle.js"></script>
 </head>
 
-<div class="master_view" ng-controller="CoolLinks as cool">
+<!-- To do - key bindings are not done in very Angular way -->
+<body ng-controller="CoolLinks as cool" ng-keydown="cool.keySense($event)">
 
-  <div class="forward" ng-click="cool.add()"> <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-right-128.png"> </div>
+  <div class="forward" ng-click="cool.add()"
+    > <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-right-128.png"> 
+  </div>
 
-  <div class="current_link"   ng-bind-html="cool.current">
+  <div class="current_link"  ng-bind-html="cool.current">
   </div>
 
   <div class="backward" ng-click="cool.subtract()"> <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-left-128.png"></div>
@@ -30,30 +32,24 @@
     </span>
   </div>
 
-</div>
+  <div class="bottom">
+    <a href="http://benbrostoff.github.io/">Back to home </a>
+    <br></br>
+    Special thanks to <a href="http://ready-reader.herokuapp.com/">ReadyReader</a> for the layout and basic logic here. Many of the ideas behind this page came from <a href="https://github.com/greg99799/">Greg Knudsen</a> and <a href="https://github.com/bsusensjackson/">Brendan Susens-Jackson</a>.
+  </div>
 
-<div class="bottom">
-  <a href="http://benbrostoff.github.io/">Back to home </a>
-  <br>
-  <br>
-  
-  Special thanks to <a href="http://ready-reader.herokuapp.com/"> ReadyReader</a> for the layout and basic logic here, specifically <a href="https://github.com/greg99799/">Greg Knudsen</a> on front-end work :-) 
-  
-
-
-</div>
-
+</body>
 </html>
 
 <script>
 
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-51453428-1', 'auto');
-  ga('send', 'pageview');
+ga('create', 'UA-51453428-1', 'auto');
+ga('send', 'pageview');
 
 </script>
 

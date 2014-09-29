@@ -25,7 +25,7 @@
 
     this.add = function(){
       this.change(function(x){return x + 1}, 
-                  this.total, 
+                  this.total - 1, 
                   ben.links.indexOf(this.current));
     }
 
@@ -35,6 +35,19 @@
                   ben.links.indexOf(this.current));
     };
 
+    this.keySense = function(keyEvent) {
+      if (keyEvent.which === 39){
+        this.add();
+      }
+
+      if (keyEvent.which === 37){
+        this.subtract();
+      }
+    };
+
+
   });
+
+
 
 })();
