@@ -25,7 +25,12 @@
   <div class="backward" ng-click="cool.subtract()"> <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-left-128.png"></div>
 
   <div class="full-list">
-    <span class="link-text" ng-repeat="insp in cool.links" ng-bind-html="insp" > </span>
+    <a class="link-text" ng-click="cool.reveal()">Full List ({{cool.links.length}})</a>
+    <br></br>
+    <span class="link-text" ng-repeat="insp in cool.links" ng-show="cool.visi"> 
+      <span ng-bind-html="insp"> </span>
+      <span> || </span>
+    </span>
   </div>
 
 </div>

@@ -5,10 +5,16 @@
 
   app.controller('CoolLinks', function(){
     this.links = shuffle(inspireBen);
-    collect = this.links
 
     this.current = this.links[0];
     this.total = inspireBen.length;
+    this.visi = false;
+
+    ben = this;
+
+    this.reveal = function() {
+      this.visi = !this.visi;
+    }
 
 
     this.change = function(op, bound, place) {
@@ -20,13 +26,13 @@
     this.add = function(){
       this.change(function(x){return x + 1}, 
                   this.total, 
-                  collect.indexOf(this.current));
+                  ben.links.indexOf(this.current));
     }
 
     this.subtract = function(){
       this.change(function(x){return x - 1}, 
                   0, 
-                  collect.indexOf(this.current));
+                  ben.links.indexOf(this.current));
     };
 
   });
