@@ -1,6 +1,6 @@
 (function(){
 
-  var app = angular.module('inspireMe', ["ngSanitize"]);
+  var app = angular.module('inspireMe', ["ngSanitize", "ngAnimate"]);
 
 
   app.controller('CoolLinks', function(){
@@ -9,10 +9,12 @@
     this.current = this.links[0];
     this.total = inspireBen.length;
     this.visi = false;
+    this.begin = true;
 
     ben = this;
 
     this.reveal = function() {
+      this.begin = false;
       this.visi = !this.visi;
     }
 
@@ -52,8 +54,10 @@
     return function (scope, element, attrs) {
       scope.$watch(attrs.fadeDirect, function(newVal) {
         if (newVal) {
+          console.log("ADDING CLASS")
           $animate.addClass(element, "fade");
         } else {
+          console.log("REMOVING CLASS")
           $animate.removeClass(element, "fade");
         }
       })
@@ -63,10 +67,10 @@
   app.animation(".fade", function() {
     return {
       addClass: function(element, className) {
-        TweenMax.to(element, 1, {opacity: 0});
+        TweenMax.to(element, 1, {opacity: 1});
       },
       removeClass: function(element, className){
-        TweenMax.to(element, 1, {opacity: 1})
+        TweenMax.to(element, 1, {opacity: 0})
       }
     }
   });
