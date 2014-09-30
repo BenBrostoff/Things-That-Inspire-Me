@@ -54,10 +54,10 @@
     return function (scope, element, attrs) {
       scope.$watch(attrs.fadeDirect, function(newVal) {
         if (newVal) {
-          console.log("ADDING CLASS")
+          console.log("BANKS")
           $animate.addClass(element, "fade");
         } else {
-          console.log("REMOVING CLASS")
+          console.log("TANKS")
           $animate.removeClass(element, "fade");
         }
       })
