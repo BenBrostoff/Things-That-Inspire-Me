@@ -24,5 +24,6 @@ inspireBen = ["<a href= 'https://www.youtube.com/watch?v=ApoJk9X7Vto'> Jeter Fli
               "<a href= 'https://www.youtube.com/watch?v=Gzj723LkRJY'> DHH </a>",
               "<a href= 'https://www.youtube.com/watch?v=86x-u-tz0MA'> Elizabeth Gilbert </a>",
               "<a href= 'https://www.youtube.com/watch?v=JYYsXzt1VDc'> Marc Andreessen </a>",
-              "<a href= 'https://www.youtube.com/watch?v=xFFs9UgOAlE'> Mark Zuckerberg </a>"]
+              "<a href= 'https://www.youtube.com/watch?v=xFFs9UgOAlE'> Mark Zuckerberg </a>",
+              "<a href= 'https://www.youtube.com/watch?v=hH-AG8hik2A'> Jarryd Hayne </a>"]
                                                                       
